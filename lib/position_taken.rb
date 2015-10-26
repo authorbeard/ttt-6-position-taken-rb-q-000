@@ -1,6 +1,8 @@
 # code your #position_taken? method here!
 
 def position_taken?(board, position)
+=begin  
+
   if board[position] == " " || board[position] == "" || board[position] == nil
     return false
   else
@@ -8,14 +10,15 @@ def position_taken?(board, position)
   end
 
 end
+=end
 
-
-# lab seems to want to build this a different way. This failed the last test
-#for a reson I don't get, so stashing it here for now. 
-=begin 
-  if (board[position] == "X") || (board[position] == "0")
+# Initially submitted this with the below section commented. It was failing
+# because of a typo. I prefer this to defining all the empty states; there 
+# are only two "taken" states, so it seems easier just to define them.  
+ 
+  if (board[position] == "X") || (board[position] == "O")
     return true
   else
     return false
   end
-=end
+end
